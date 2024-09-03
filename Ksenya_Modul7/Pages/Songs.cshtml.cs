@@ -18,10 +18,10 @@ namespace Ksenya_Modul7.Pages
 
         public void OnGet()
         {
-            OnGet(_context);
+            OnGetWithContext(_context);
         }
 
-        public void OnGet(MyDbContext _context)
+        public void OnGetWithContext(MyDbContext _context)
         {
             Songs = _context.Songs.ToList();
         }
