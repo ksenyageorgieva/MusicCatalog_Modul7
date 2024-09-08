@@ -1,18 +1,19 @@
 using Ksenya_Modul7.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using MusicCatalog.Models;
 
 namespace Ksenya_Modul7.Pages
 {
     public class PeopleModel : PageModel
     {
-       private readonly DataBaseContext _context;
+       private readonly MyDbContext _context;
 
         public List<Person> People { get; set;} = new List<Person>();
 
         [BindProperty]
         public Person NewPerson { get; set; }
-        public PeopleModel(DataBaseContext context)
+        public PeopleModel(MyDbContext context)
         {
             _context = context;
         }

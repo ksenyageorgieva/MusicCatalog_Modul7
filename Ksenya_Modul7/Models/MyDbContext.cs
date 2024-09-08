@@ -8,12 +8,19 @@ namespace MusicCatalog.Models
 
         {
             public DbSet<Song> Songs { get; set; }
-            protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            {
-                optionsBuilder.UseInMemoryDatabase("MyDb");
-            }
+             public DbSet<Person> People { get; set; }  
 
+           //// protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+           // {
+           // //    optionsBuilder.UseInMemoryDatabase("MyDb");
+           // }
+
+          public MyDbContext(DbContextOptions<MyDbContext> options) 
+            : base(options)
+        {
 
         }
+        
+         }
    
 }
