@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Ksenya_Modul7.Pages
+namespace MusicCatalog.View.Shared
 {
     public class IndexModel : PageModel
     {
