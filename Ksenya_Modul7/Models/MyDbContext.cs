@@ -26,9 +26,7 @@ namespace MusicCatalog.Models
         {
         }
 
-        public MyDbContext(DbContextOptions options) : base(options)
-        {
-        }
+
     }
    
 }

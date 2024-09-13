@@ -21,7 +21,7 @@ internal class Program
             builder.Configuration.GetConnectionString("ApplicationContextConnectionString") ?? throw new InvalidDataException("Connection string ApplicationContextConnectionString is not found");
         builder.Services.AddDbContext<MyDbContext>(context => context.UseMySQL(connectionString));
 
-        using var app = builder.Build();
+        var app = builder.Build();
 
         // Configure the HTTP request pipeline.
         if (!app.Environment.IsDevelopment())
